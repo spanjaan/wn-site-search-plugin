@@ -6,6 +6,11 @@ This plugin adds global search capabilities to WinterCMS.
 
 This plugin is a WinterCMS-compatible fork of the original [OFFLINE.SiteSearch plugin for OctoberCMS](https://github.com/OFFLINE-GmbH/oc-site-search-plugin). It has been adapted to work seamlessly with WinterCMS, preserving the original functionality and adding enhancements specific to the WinterCMS ecosystem.
 
+## Installation
+```html
+composer require spanjaan/wn-site-search-plugin
+
+```
 ## Available languages
 
 * English

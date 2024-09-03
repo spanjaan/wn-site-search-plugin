@@ -1,0 +1,30 @@
+{
+    "name": "spanjaan/wn-site-search-plugin",
+    "type": "winter-plugin",
+    "description": "This plugin adds global search capabiliies to WinterCMS.",
+    "homepage": "https://github.com/spanjaan/wn-site-search-plugin",
+    "keywords": ["winter", "wintercms", "sitesearch", "search", "winter cms"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Offline GmbH",
+            "homepage": "https://offline.ch/",
+            "role": "Original Author"
+        },
+        {
+            "name": "spanjaan",
+            "role": "Author"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/spanjaan/wn-site-search-plugin/issues",
+        "source": "https://github.com/spanjaan/wn-site-search-plugin"
+    },
+    "require": {
+        "php": ">=7.0",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "sitesearch"
+    }
+}

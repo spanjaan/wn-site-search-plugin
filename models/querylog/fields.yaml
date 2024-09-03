@@ -1,0 +1,31 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    query:
+        label: 'spanjaan.sitesearch::lang.log.query'
+        size: tiny
+        span: auto
+        type: textarea
+    created_at:
+        label: 'spanjaan.sitesearch::lang.log.created_at'
+        mode: datetime
+        span: auto
+        type: datepicker
+    domain:
+        label: 'spanjaan.sitesearch::lang.log.domain'
+        span: auto
+        type: text
+    location:
+        label: 'spanjaan.sitesearch::lang.log.location'
+        span: auto
+        type: text
+    session_id:
+        label: 'spanjaan.sitesearch::lang.log.session_id'
+        span: auto
+        type: text
+    useragent:
+        label: 'spanjaan.sitesearch::lang.log.useragent'
+        span: auto
+        type: text

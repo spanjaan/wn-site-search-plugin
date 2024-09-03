@@ -1,0 +1,4 @@
+export:
+    title: spanjaan.sitesearch::lang.log.export
+    modelClass: SpAnjaan\Sitesearch\Models\QueryLogExport
+    list: $/spanjaan/sitesearch/models/querylog/columns.yaml

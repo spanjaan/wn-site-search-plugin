@@ -1,0 +1,5 @@
+scopes:
+    created_at:
+        label: spanjaan.sitesearch::lang.log.created_at
+        type: daterange
+        conditions: created_at >= ':filtered'

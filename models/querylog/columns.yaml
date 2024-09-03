@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: 'spanjaan.sitesearch::lang.log.id'
+        type: number
+    query:
+        label: 'spanjaan.sitesearch::lang.log.query'
+        type: text
+    domain:
+        label: 'spanjaan.sitesearch::lang.log.domain'
+        type: text
+    location:
+        label: 'spanjaan.sitesearch::lang.log.location'
+        type: text
+    useragent:
+        label: 'spanjaan.sitesearch::lang.log.useragent'
+        type: text
+    session_id:
+        label: 'spanjaan.sitesearch::lang.log.session_id'
+        type: text
+    created_at:
+        label: 'spanjaan.sitesearch::lang.log.created_at'
+        type: datetime

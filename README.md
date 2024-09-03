@@ -1,4 +1,4 @@
-# SiteSearch Plugin for WinterCMS
+# Site-Search Plugin for WinterCMS
 
 This plugin adds global search capabilities to WinterCMS.
 

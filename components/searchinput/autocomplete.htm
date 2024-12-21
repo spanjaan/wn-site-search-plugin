@@ -1,17 +1,46 @@
 {% if results.count %}
-    {% for result in results | slice(0, __SELF__.autoCompleteResultCount) %}
-        {# Display results #}
-        {% partial __SELF__ ~ '::searchresult.htm' result = result %}
-    {% endfor %}
+    <div class="list-group">
+        {% for result in results | slice(0, __SELF__.autoCompleteResultCount) %}
+        <div class="list-group-item py-3 d-flex align-items-start gap-3">
+            {% if result.thumb %}
+                <div class="flex-shrink-0 rounded overflow-hidden" style="width: 120px; height: 80px;">
+                    <a href="{{ result.url }}">
+                        <img 
+                            src="{{ result.thumb.getThumb(250, auto) }}" 
+                            alt="{{ result.title }}"  
+                            class="img-fluid w-100 h-100 border object-fit-cover"
+                        />
+                    </a>
+                </div>
+            {% endif %}
+            <div class="flex-grow-1">
+                <h5 class="fw-semibold mb-1 d-flex align-items-center justify-content-between">
+                    <a href="{{ result.url }}" class="text-decoration-none text-dark hover-underline">
+                        {{ result.title | raw }}
+                    </a>
+                    {% if __SELF__.showProviderBadge %}
+                        <span class="badge bg-success text-uppercase ms-2">
+                            {{ result.provider }}
+                        </span>
+                    {% endif %}
+                </h5>
+                <p class="text-muted mb-0 small">
+                    {{ result.text | raw | slice(0, 100) }}...
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
     {% if __SELF__.searchPage %}
-        <p class="ss-show-all-results">
-            <a href="{{ __SELF__.searchPage | page }}?q={{ query | url_encode(true) }}">
+        <div class="text-center mt-4">
+            <a href="{{ __SELF__.searchPage | page }}?q={{ query | url_encode(true) }}" class="btn btn-primary btn-lg">
                 Show all results &raquo;
             </a>
-        </p>
+        </div>
     {% endif %}
 {% else %}
-    {# No results found #}
-    <p>Your search for {{ query }} returned no results.</p>
+    <div class="alert alert-danger mb-0" role="alert">
+        Your search for <strong>{{ query }}</strong> returned no results.
+    </div>
 {% endif %}

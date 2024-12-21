@@ -174,7 +174,7 @@ class WinterBlogResultsProvider extends ResultsProvider
      */
     protected function getUrl($post)
     {
-        $url = trim(Settings::get('winter_blog_posturl', '/blog/post'), '/');
+        $url = trim(Settings::get('winter_blog_posturl', '/post'), '/');
 
         return implode('/', [$url, $post->slug]);
     }
@@ -196,7 +196,7 @@ class WinterBlogResultsProvider extends ResultsProvider
      */
     public function identifier()
     {
-        return 'RainLab.Blog';
+        return 'Winter.Blog';
     }
 
     /**

@@ -109,6 +109,7 @@ class SearchInput extends BaseComponent
      */
     public function onRun()
     {
+        $this->addJs('/plugins/spanjaan/sitesearch/assets/js/result.js');
         $this->setVar('useAutoComplete');
         $this->setVar('searchPage');
         $this->setVar('query', input('q', ''));

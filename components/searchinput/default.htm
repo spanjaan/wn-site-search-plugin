@@ -1,19 +1,32 @@
-<form action="{{ __SELF__.searchPage | page }}?q={{ query | url_encode(true) }}" method="get">
-    <div class="ss-search-form">
-        <div class="ss-search-form__input">
-            <input name="q" type="text" placeholder="What are you looking for?" 
-                   value="{{ __SELF__.query }}"
-                   autocomplete="off"
-                   autofocus
-                    {% if __SELF__.useAutoComplete %}
-                        data-track-input
-                        data-request="{{ __SELF__ }}::onType"
-                        data-request-before-update="document.getElementById('autocomplete-results').classList.add('ss-search-form__results--visible')"
-                        data-request-update="'{{ __SELF__ }}::autocomplete': '#autocomplete-results'"
-                    {% endif %}
-            >
-            <button class="ss-search-form__submit" type="submit">Search</button>
+<form action="{{ __SELF__.searchPage | page }}?q={{ query | url_encode(true) }}" method="get" class="needs-validation align-items-center" novalidate>
+    <div class="position-relative d-flex">
+        <input 
+            name="q" 
+            id="search-input"
+            type="text" 
+            class="form-control form-control-lg ps-5" 
+            placeholder="What are you looking for?" 
+            value="{{ __SELF__.query }}" 
+            autocomplete="off" 
+            required
+            {% if __SELF__.useAutoComplete %}
+                data-track-input
+                data-request="{{ __SELF__ }}::onType"
+                data-request-update="'{{ __SELF__ }}::autocomplete': '#autocomplete-results'"
+            {% endif %}
+        >
+        <i class="bx bx-search fs-5 text-muted position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+        <div class="invalid-tooltip position-absolute start-0 top-0 mt-n4">
+            Please enter your search term!
         </div>
-        <div class="ss-search-form__results" id="autocomplete-results"></div>
+   
+        <button 
+            class="btn btn-primary btn-lg ms-2" 
+            type="submit">
+            Search
+        </button>
+    </div>
+    <div class="bg-secondary px-3 py-3 mt-4 rounded d-none" id="autocomplete-results">
     </div>
 </form>
+

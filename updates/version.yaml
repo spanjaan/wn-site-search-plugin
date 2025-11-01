@@ -3,3 +3,5 @@
 1.0.1:
     - 'Create Query Log Table'
     - v1.0.1/create_query_log_table.php
+1.0.2:
+    - 'Bug Fixes in setUrl function'

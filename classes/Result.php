@@ -168,16 +168,7 @@ class Result
      */
     public function setUrl($url)
     {
-        // If a provider returns the absolute URL to a result
-        // remove the base url to make sure every result can
-        // be linked by using the "app" filter in Twig.
-        $baseUrl = URL::to('/');
-        if (starts_with($url, $baseUrl)) {
-            $url = str_replace($baseUrl, '', $url);
-        }
-
-        $this->url = $url;
-
+        $this->url = url($url);
         return $this;
     }
 

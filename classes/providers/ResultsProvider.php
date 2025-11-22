@@ -3,7 +3,7 @@
 namespace SpAnjaan\Sitesearch\Classes\Providers;
 
 use SpAnjaan\Sitesearch\Classes\Result;
-use RainLab\Translate\Classes\Translator;
+use Winter\Translate\Classes\Translator;
 use System\Classes\PluginManager;
 use System\Models\File;
 
@@ -39,7 +39,7 @@ abstract class ResultsProvider
      */
     protected $displayName;
     /**
-     * An instance of a RainLab.Translate Translator class if available.
+     * An instance of a Winter.Translate Translator class if available.
      *
      * @var Translator|bool
      */
@@ -171,7 +171,7 @@ abstract class ResultsProvider
      */
     protected function translator()
     {
-        return $this->isPluginAvailable('RainLab.Translate')
+        return $this->isPluginAvailable('Winter.Translate')
             ? Translator::instance()
             : false;
     }

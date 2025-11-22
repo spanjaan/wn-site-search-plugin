@@ -8,7 +8,7 @@ use DB;
 use Illuminate\Database\Eloquent\Collection;
 use SpAnjaan\Sitesearch\Classes\Result;
 use SpAnjaan\Sitesearch\Models\Settings;
-use RainLab\Blog\Models\Post;
+use Winter\Blog\Models\Post;
 use Throwable;
 
 /**
@@ -154,7 +154,7 @@ class WinterBlogResultsProvider extends ResultsProvider
     }
 
     /**
-     * Checks if the RainLab.Blog Plugin is installed and
+     * Checks if the Winter.Blog Plugin is installed and
      * enabled in the config.
      *
      * @return bool
